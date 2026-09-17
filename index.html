@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b0614" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Our Night Skies</title>
+    <meta name="description" content="Six nights, six skies — remembered for you." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <main id="app">
+      <section id="intro" class="panel panel--center" data-screen="intro">
+        <p class="eyebrow">Anna</p>
+        <h1>These Are Our Stars</h1>
+        <p class="lede">
+          I picked the nights that meant the most to me in our relationship.
+          I can't even express with words how much I love you.
+        </p>
+        <button type="button" class="btn" id="begin-btn">View Our Skies</button>
+      </section>
+
+      <section id="night" class="panel panel--sky" data-screen="night" hidden>
+        <header class="night-header">
+          <p class="eyebrow" id="night-index">Night 1 of 6</p>
+          <h2 id="night-title">October 1, 2025</h2>
+          <p class="place" id="night-place">Madison, Wisconsin</p>
+          <p class="time" id="night-time">10:30 in the evening</p>
+        </header>
+
+        <div class="caption-wrap">
+          <p class="caption-hint">Tap the words to change them — they stay on this device.</p>
+          <div
+            id="caption"
+            class="caption"
+            contenteditable="false"
+            spellcheck="true"
+            role="textbox"
+            aria-label="Editable caption for this night"
+          ></div>
+        </div>
+
+        <nav class="night-nav" aria-label="Night skies">
+          <button type="button" class="btn btn--ghost" id="prev-btn">Previous</button>
+          <ol class="dots" id="dots"></ol>
+          <button type="button" class="btn" id="next-btn">Next sky</button>
+        </nav>
+      </section>
+
+      <section id="finale" class="panel panel--center" data-screen="finale" hidden>
+        <p class="eyebrow">Always</p>
+        <h1>These skies are ours</h1>
+        <p class="lede">
+          Wherever we stand next, the dark still knows how to find us.
+        </p>
+        <div class="finale-actions">
+          <button type="button" class="btn btn--ghost" id="again-btn">Watch them again</button>
+          <button type="button" class="btn" id="first-btn">Return to the first night</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/nights.js"></script>
+    <script src="js/astronomy.js"></script>
+    <script src="js/sky.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
