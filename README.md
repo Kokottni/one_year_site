@@ -1,6 +1,6 @@
-# Our Night Skies
+# My One Year site with my gf
 
-A small romantic website for six remembered nights. It is static HTML, CSS, and JavaScript, so a Raspberry Pi can host it with almost nothing installed.
+A small romantic website for different fun nights we've had. It is static HTML, CSS, and JavaScript, so a Raspberry Pi can host it with almost nothing installed.
 
 Each page of the album shows the night sky as it would have looked around **10:30 p.m. local time** from that place on that date: bright stars in real positions, the Milky Way band, and the Moon if it was up. Captions can be edited in the browser; they are saved on that device with `localStorage`.
 
