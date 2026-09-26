@@ -10,20 +10,20 @@ const NIGHTS = [
     glow: 0.62,
     milky: 0.38,
     defaultCaption:
-      "The first sky I wanted to keep. Madison, early autumn, and you.",
+      "This is the night we met, the day I knew I found someone beyond special.",
   },
   {
-    id: "madison-2025-10-11",
+    id: "lodi-2025-10-11",
     title: "October 11, 2025",
-    place: "Madison, Wisconsin",
+    place: "Lodi, Wisconsin",
     timeLabel: "10:30 in the evening",
     utc: "2025-10-12T03:30:00Z",
-    lat: 43.0731,
-    lon: -89.4012,
+    lat: 43.3142,
+    lon: -89.5311,
     glow: 0.6,
     milky: 0.4,
     defaultCaption:
-      "Ten nights later. Same city, a quieter kind of dark, still us.",
+      "Ten nights later. At the pumpkin patch, I knew I needed to make our relationship official.",
   },
   {
     id: "cedarburg-2025-12-25",
@@ -36,7 +36,7 @@ const NIGHTS = [
     glow: 0.48,
     milky: 0.32,
     defaultCaption:
-      "Christmas in Cedarburg. Cold air, a small-town sky, and every light meaning you.",
+      "Our first Christmas together, getting to spend my time with you and your family was so fun.",
   },
   {
     id: "puntacana-2026-05-14",
@@ -49,7 +49,7 @@ const NIGHTS = [
     glow: 0.4,
     milky: 0.78,
     defaultCaption:
-      "A southern sky over warm water. May, Punta Cana, and the night leaning close.",
+      "The first day we arrived to our first vacation. It was the most special time, I will never forget the fun we had. ",
   },
   {
     id: "keshena-2026-07-18",
@@ -62,7 +62,7 @@ const NIGHTS = [
     glow: 0.18,
     milky: 0.92,
     defaultCaption:
-      "Keshena in July. The woods go quiet, and the sky finally has room to speak.",
+      "Your birthday, the best day of the summer. Getting to shred on the jet ski and have all that fun playing all those games.",
   },
   {
     id: "middleton-2026-08-01",
@@ -75,6 +75,19 @@ const NIGHTS = [
     glow: 0.52,
     milky: 0.7,
     defaultCaption:
-      "Middleton, late summer. The last of these six skies — still unfolding above us.",
+      "The day we moved in together, the first day of so many fun days to come.",
+  },
+  {
+    id: "madison-2026-10-02",
+    title: "October 2, 2026",
+    place: "Madison, Wisconsin",
+    timeLabel: "10:30 in the evening",
+    utc: "2026-10-02T03:30:00Z",
+    lat: 43.0731,
+    lon: -89.4012,
+    glow: 0.62,
+    milky: 0.38,
+    defaultCaption:
+      "The day we celebrate our one year. I can't even describe how happy you make me. Life with you is the best life.",
   },
 ];

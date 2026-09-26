@@ -315,6 +315,145 @@ h2 {
   flex: 1 1 12rem;
 }
 
+.create-entry-btn {
+  margin: 0.7rem 0 0 0.35rem;
+}
+
+.location-search,
+.night-builder {
+  text-align: left;
+}
+
+.location-search {
+  margin: 1.3rem auto 1.1rem;
+  max-width: 35rem;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.field-label span,
+.field-help,
+.attribution {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.015em;
+}
+
+.search-row {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.search-row input {
+  min-width: 0;
+  flex: 1;
+}
+
+.night-builder input,
+.night-builder textarea,
+.search-row input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(8, 5, 14, 0.72);
+  color: var(--ink);
+  font: inherit;
+  color-scheme: dark;
+}
+
+.night-builder textarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+
+.night-builder input:focus,
+.night-builder textarea:focus,
+.search-row input:focus {
+  border-color: rgba(201, 169, 110, 0.7);
+  outline: 2px solid rgba(201, 169, 110, 0.18);
+}
+
+.form-status {
+  min-height: 1.2em;
+  margin: 0.5rem 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.location-results {
+  display: grid;
+  gap: 0.4rem;
+  max-height: 12rem;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.location-option {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(8, 5, 14, 0.56);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+
+.location-option:hover,
+.location-option:focus-visible,
+.location-option.is-selected {
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.13);
+  outline: none;
+}
+
+.attribution {
+  margin: 0.55rem 0 0;
+  text-align: right;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.form-field {
+  min-width: 0;
+  margin-bottom: 0.8rem;
+}
+
+.offset-field {
+  max-width: 15rem;
+}
+
+.field-help {
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+}
+
+.builder-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -347,6 +486,20 @@ h2 {
     letter-spacing: 0.04em;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+  }
+
+  .search-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .create-entry-btn {
+    margin: 0.7rem 0 0;
   }
 }
 

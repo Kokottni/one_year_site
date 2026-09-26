@@ -1,0 +1,33 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Copy code to Pi
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.PI_HOST }}
+        username: ${{ secrets.PI_USER }}
+        key: ${{ secrets.PI_SSH_KEY }}
+        source: "backend/*"
+        target: "/home/kokottni/code/nova_wellness_apps"
+
+    - name: Restart backend service
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.PI_HOST }}
+        username: ${{ secrets.PI_USER }}
+        key: ${{ secrets.PI_SSH_KEY }}
+        script: |
+          cd /home/kokottni/code/our_night_skies
+
+          ipython3 -m http.server 8080 --bind 0.0.0.0

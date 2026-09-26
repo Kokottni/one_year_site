@@ -34,6 +34,65 @@
           I can't even express with words how much I love you.
         </p>
         <button type="button" class="btn" id="begin-btn">View Our Skies</button>
+        <button type="button" class="btn btn--ghost create-entry-btn" id="create-night-btn">
+          Create your own night
+        </button>
+      </section>
+
+      <section id="create-night" class="panel panel--center" data-screen="create-night" hidden>
+        <p class="eyebrow">Make it yours</p>
+        <h1>Create a night</h1>
+        <p class="lede">
+          Choose a place and a moment. We’ll find its coordinates and paint the sky above it.
+        </p>
+
+        <div class="location-search">
+          <label class="field-label" for="location-query">Where were you?</label>
+          <div class="search-row">
+            <input
+              id="location-query"
+              name="location"
+              type="search"
+              placeholder="City, landmark, or address"
+              autocomplete="off"
+              required
+            />
+            <button type="button" class="btn btn--ghost" id="search-location-btn">
+              Find place
+            </button>
+          </div>
+          <p id="location-status" class="form-status" aria-live="polite">
+            Search for a place, then choose the matching result.
+          </p>
+          <ul id="location-results" class="location-results" aria-label="Location search results"></ul>
+          <p class="attribution">Location search by Nominatim · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors</a></p>
+        </div>
+
+        <form id="night-builder" class="night-builder">
+          <div class="form-grid">
+            <div class="form-field">
+              <label class="field-label" for="night-date">Date</label>
+              <input id="night-date" name="date" type="date" required />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="night-time-input">Time at the place</label>
+              <input id="night-time-input" name="time" type="time" value="22:30" required />
+            </div>
+          </div>
+          <div class="form-field offset-field">
+            <label class="field-label" for="utc-offset">Place’s UTC offset (hours)</label>
+            <input id="utc-offset" name="utcOffset" type="number" min="-12" max="14" step="0.25" required />
+            <p class="field-help">Pre-filled from your device’s time zone for this date. Adjust it for the place you searched.</p>
+          </div>
+          <div class="form-field">
+            <label class="field-label" for="night-caption">A note for this night <span>(optional)</span></label>
+            <textarea id="night-caption" name="caption" rows="3" maxlength="500" placeholder="Why do you remember this night?"></textarea>
+          </div>
+          <div class="builder-actions">
+            <button type="button" class="btn btn--ghost" id="cancel-create-btn">Back</button>
+            <button type="submit" class="btn" id="save-night-btn" disabled>Save this night</button>
+          </div>
+        </form>
       </section>
 
       <section id="night" class="panel panel--sky" data-screen="night" hidden>
@@ -45,7 +104,7 @@
         </header>
 
         <div class="caption-wrap">
-          <p class="caption-hint">Tap the words to change them — they stay on this device.</p>
+          <p class="caption-hint">This night sky is special because...</p>
           <div
             id="caption"
             class="caption"
@@ -64,13 +123,13 @@
       </section>
 
       <section id="finale" class="panel panel--center" data-screen="finale" hidden>
-        <p class="eyebrow">Always</p>
-        <h1>These skies are ours</h1>
+        <p class="eyebrow">Anna</p>
+        <h1>These nights are ours</h1>
         <p class="lede">
-          Wherever we stand next, the dark still knows how to find us.
+          No matter where we go, we will always have each other and the stars
         </p>
         <div class="finale-actions">
-          <button type="button" class="btn btn--ghost" id="again-btn">Watch them again</button>
+          <button type="button" class="btn btn--ghost" id="create-night-end-btn">Create a new night</button>
           <button type="button" class="btn" id="first-btn">Return to the first night</button>
         </div>
       </section>

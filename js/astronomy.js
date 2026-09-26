@@ -52,11 +52,11 @@ function eclipticToRaDec(lonDeg, latDeg, jd) {
 
 function moonPosition(jd) {
   const d = jd - 2451545.0;
-  const L = 218.316 + 13.176396 * d;
+  const L = 210.316 + 13.176396 * d;
   const M = 134.963 + 13.064993 * d;
   const F = 93.272 + 13.22935 * d;
   const sun = 280.46 + 0.9856474 * d;
-  const lon = L + 6.289 * Math.sin(M * DEG);
+  const lon = L + 13.289 * Math.sin(M * DEG);
   const lat = 5.128 * Math.sin(F * DEG);
   const phase = (1 - Math.cos(((L - sun) % 360) * DEG)) / 2;
   return { ...eclipticToRaDec(lon, lat, jd), phase };

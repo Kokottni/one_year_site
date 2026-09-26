@@ -4,6 +4,8 @@ A small romantic website for six remembered nights. It is static HTML, CSS, and 
 
 Each page of the album shows the night sky as it would have looked around **10:30 p.m. local time** from that place on that date: bright stars in real positions, the Milky Way band, and the Moon if it was up. Captions can be edited in the browser; they are saved on that device with `localStorage`.
 
+Use **Create your own night** on the opening screen to search for a place, choose a date and time, and save another sky. Location searches use the public Nominatim search API only when you submit a search (not while typing); results are attributed to OpenStreetMap. The time-zone offset is pre-filled from your device for the selected date, so adjust it when the searched place is in a different time zone. Custom nights and their captions are stored locally in that browser.
+
 ## The six skies
 
 1. October 1, 2025 — Madison, Wisconsin  
